@@ -5,11 +5,12 @@ function add(){
     s += value;
     s += "+";
    document.getElementById("sum").innerHTML = s;
-   if(sum.length==0){
-   sum = value;
+   if(sum==0){
+   sum += value;
    }else{
     sum += value;
    }
+   console.log(sum);
 }
 function sub(){
     value = parseInt(document.getElementById("n").value);
@@ -18,11 +19,12 @@ function sub(){
    document.getElementById("sum").innerHTML = s;
    console.log(sum);
 
-     if(sum.length==0){
+    if(sum==0){
    sum = value;
-   console.log(sum)
+   console.log(sum);
    }else{
-    sum += value;
+    sum -= value;
+    console.log(sum);
    }
     console.log(sum);
 }
@@ -31,11 +33,11 @@ function mul(){
     s += value;
     s += "*";
    document.getElementById("sum").innerHTML = s;
-   if(sum.length==0){
+   if(sum==0){
     sum = value;
     console.log(sum)
     }else{
-     sum += value;
+     sum *= value;
     }
 }
 function div(){
@@ -43,28 +45,40 @@ function div(){
     s += value;
     s += "/";
    document.getElementById("sum").innerHTML = s;
-   if(sum.length==0){
+   if(sum==0){
     sum = value;
     console.log(sum)
     }else{
-     sum += value;
+     sum /= value;
     }
 }
 function res(){
     value = parseInt(document.getElementById("n").value);
-    if(s.charAt(s.length-1)=="+"){
+    if(s.charAt(s.length-1)=='+'){
         sum += value;
+        s += value;
+        document.getElementById("sum").innerHTML = s+""+"="+`${sum}`;
+         console.log(sum)
     }
-     if(s.charAt(s.length-1)=="-"){
+     if(s.charAt(s.length-1)=='-'){
+        console.log(sum)
         sum = sum-value;
+        s += value;
+       document.getElementById("sum").innerHTML = s+""+"="+`${sum}`;
+        console.log(sum)
     }
      if(s.charAt(s.length-1)=='*'){
         sum *= value;
+        s += value;
+        document.getElementById("sum").innerHTML = s+""+"="+`${sum}`;
+         console.log(sum)
     }else{
         sum /=value;
+        s += value;
+        document.getElementById("sum").innerHTML = s+""+"="+`${sum}`;
+         console.log(sum)
     }
-    s += value;
-    document.getElementById("sum").innerHTML = s+""+"="+sum;
+    
     
 }
 

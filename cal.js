@@ -4,39 +4,61 @@ function add(){
     value = parseInt(document.getElementById("n").value);
     s += value;
     s += "+";
-    
    document.getElementById("sum").innerHTML = s;
-   sum += value;
+   if(sum.length==0){
+   sum = value;
+   }else{
+    sum += value;
+   }
 }
 function sub(){
     value = parseInt(document.getElementById("n").value);
     s += value;
     s += "-";
    document.getElementById("sum").innerHTML = s;
-    sum -= value;
+   console.log(sum);
+
+     if(sum.length==0){
+   sum = value;
+   console.log(sum)
+   }else{
+    sum += value;
+   }
+    console.log(sum);
 }
 function mul(){
     value = parseInt(document.getElementById("n").value);
     s += value;
     s += "*";
    document.getElementById("sum").innerHTML = s;
-    sum *= value;
+   if(sum.length==0){
+    sum = value;
+    console.log(sum)
+    }else{
+     sum += value;
+    }
 }
 function div(){
     value = parseInt(document.getElementById("n").value);
     s += value;
     s += "/";
    document.getElementById("sum").innerHTML = s;
-    sum /= value;
+   if(sum.length==0){
+    sum = value;
+    console.log(sum)
+    }else{
+     sum += value;
+    }
 }
 function res(){
     value = parseInt(document.getElementById("n").value);
-    if(s.charAt(s.length-1)=='+'){
+    if(s.charAt(s.length-1)=="+"){
         sum += value;
-    }else if(s.charAt(s.length-1)=='-'){
-        sum -= value;
     }
-    else if(s.charAt(s.length-1)=='*'){
+     if(s.charAt(s.length-1)=="-"){
+        sum = sum-value;
+    }
+     if(s.charAt(s.length-1)=='*'){
         sum *= value;
     }else{
         sum /=value;

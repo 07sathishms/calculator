@@ -54,30 +54,10 @@ function div(){
 }
 function res(){
     value = parseInt(document.getElementById("n").value);
-    if(s.charAt(s.length-1)=='+'){
-        sum += value;
-        s += value;
-        document.getElementById("sum").innerHTML = s+""+"="+`${sum}`;
+   
+        document.getElementById("sum").innerHTML = s.substring(0,s.length-1)+""+"="+`${sum}`;
          console.log(sum)
-    }
-     if(s.charAt(s.length-1)=='-'){
-        console.log(sum)
-        sum = sum-value;
-        s += value;
-       document.getElementById("sum").innerHTML = s+""+"="+`${sum}`;
-        console.log(sum)
-    }
-     if(s.charAt(s.length-1)=='*'){
-        sum *= value;
-        s += value;
-        document.getElementById("sum").innerHTML = s+""+"="+`${sum}`;
-         console.log(sum)
-    }else{
-        sum /=value;
-        s += value;
-        document.getElementById("sum").innerHTML = s+""+"="+`${sum}`;
-         console.log(sum)
-    }
+    
     
     
 }

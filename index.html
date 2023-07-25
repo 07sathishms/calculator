@@ -4,16 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+     .container{
+        margin-left: 20%;
+        position: relative;
+     }
+     button{
+        padding-left: 1px;
+        border: 1px;
+        width: 50px;
+        height: 50px;
+        background-color: antiquewhite;
+     }
+     #n{
+        border: 1px solid bisque;
+        background-color: rgb(130, 146, 146);
+        width: 140px;
+        height: 30px;
+        border-radius: 10px;
+     }
+    </style>
 </head>
 <body>
-    <input type="number" placeholder="enter the number" id="n"><br><br>
+    <div class="container">
+ <p style="color: rgb(106, 141, 141);">Enter the number <input type="number" placeholder="enter the number" id="n"><br><br></p>
     <button onclick="add()">Add</button>
     <button onclick="sub()">SUB</button>
     <button onclick="mul()">MUL</button>
     <button onclick="div()">DIV</button>
     <button onclick="res()">=</button>
     <button onclick="window.location.reload()">AC</button>
-    <p id="sum"></p>
+    <p style="background-color: rgb(130, 247, 94); border-radius: 40px; width: 100px; text-align: center;" id="sum"></p>
+</div>
     <script src="./cal.js"></script>
 </body>
 </html>
